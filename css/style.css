@@ -1,10 +1,12 @@
 html, body {
   padding:0;
     margin:0;
-    background:black;
+    background:white;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
     font-weight: lighter;
     font-size: 18px;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .middle {
@@ -57,10 +59,9 @@ a {
 
 #b{
    margin-top:100%;
-   background:yellow;
    width: 100%;
    height: auto;
-
+   background-color: white;
 }
 
 #c{
@@ -75,4 +76,11 @@ a {
 }
 .container-fluid {
   padding: 0 0!important;
+}
+.width{
+  width: 100%;
+}
+.pinkBackground{
+  background-color: pink;
+  opacity: 0.7;
 }
