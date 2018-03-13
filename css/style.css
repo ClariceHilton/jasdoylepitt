@@ -1,7 +1,7 @@
 html, body {
   padding:0;
     margin:0;
-    background:white;
+    background:black;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
     font-weight: lighter;
     font-size: 18px;
@@ -11,14 +11,14 @@ html, body {
 
 .middle {
   position: absolute;
-  bottom: 50%;
+  padding-left: 2%;
   width: 100%;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   font-weight: lighter;
-  margin-top: -60%;
+  color: white;
 }
 a {
-  color:#4682B4;
+  color:white;
 
 }
 #wrapper {
@@ -51,6 +51,9 @@ a {
   -o-background-size: cover;
   background-size: cover;
 }
+.one {
+  font-family: avenir;
+}
 #topPic {
     width: 100%;
     height: auto;
@@ -82,5 +85,24 @@ a {
 }
 .pinkBackground{
   background-color: pink;
-  opacity: 0.7;
+  opacity: 0.8;
+}
+.container {
+    background: black;
+    position: relative;
+}
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+  opacity: 0.75;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*width: ;*/
+	height: 100%;
+  object-fit: contain;
 }
