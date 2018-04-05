@@ -1,3 +1,4 @@
+//parallax
 $(document).ready(function() {
 (function($){
     /* Store the original positions */
