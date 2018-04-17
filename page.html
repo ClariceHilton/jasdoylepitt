@@ -6,16 +6,85 @@
   <title>Jasmine Doyle Pitt</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="Clarice Hilton">
-   <script type="text/javascript" src="javascript/jquery-3.3.1.min.js"></script>
-   <script type="text/javascript" src="javascript/javascript.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
 
+  <link rel="stylesheet" href="css/examples.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+   <script type="text/javascript" src="javascript/scrollmagic/uncompressed/ScrollMagic.js"></script>
+   <script src="javascript/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+
+<style type="text/css">
+.panel {
+  height: 100%;
+  width: 100%;
+}
+.panel.green {
+  margin-bottom: 400px
+}
+</style>
 </head>
 
 <body>
-  <div class="container-fluid">
+
+<section class="panel blue">
+  <div class="middle">
+      <div>JAS DOYLE PITT</div>
+      <div>WRITER/ DIRECTOR</div>
+      <div>COMMERCIAL VIDEOGRAPHER</div>
+      <a href="mailto:jasdoylepitt@gmail.com">JASDOYLEPITT@GMAIL.COM</a>
+  </div>
+  <div id="topPic" class="background_image">
+  </div>
+</section>
+<section class="panel turqoise">
+  <img class="width" src="images/abrazame2.png" />
+  <div class="row pinkBackground">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+      <div>Abrazame</div>
+      <div> blah blah blah </div>
+    </div>
+</section>
+<section class="panel green">
+	<b>THREE</b>
+</section>
+<section class="panel bordeaux">
+	<b>FOUR</b>
+</section>
+<script>
+var controller = new ScrollMagic.Controller();
+
+// create a scene
+new ScrollMagic.Scene({
+    duration: 100,	// the scene should last for a scroll distance of 100px
+    offset: 50		// start this scene after scrolling for 50px
+  })
+	$(function () { // wait for document ready
+		// init
+		var controller = new ScrollMagic.Controller({
+			globalSceneOptions: {
+				triggerHook: 'onLeave'
+			}
+		});
+
+		// get all slides
+		var slides = document.querySelectorAll("section.panel");
+
+		// create scene for every slide
+		for (var i=0; i<slides.length; i++) {
+			new ScrollMagic.Scene({
+					triggerElement: slides[i]
+				})
+				.setPin(slides[i])
+				.addIndicators() // add indicators (requires plugin)
+				.addTo(controller);
+		}
+	});
+</script>
+
+  <!--<div class="container-fluid">
     <div id="wrapper">
       <div class="panels">
         <div id="a">
@@ -44,6 +113,6 @@
 
       </div>
     </div>
-  </div>
+  </div>-->
 </body>
 </html>

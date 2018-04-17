@@ -1,43 +1,76 @@
-html, body {
-  padding:0;
-    margin:0;
-    background:black;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-    font-weight: lighter;
-    font-size: 18px;
-    max-width: 100%;
-    overflow-x: hidden;
+/*
+	Copyright ScrollMagic
+*/
+body {
+	font-family: "Source Sans Pro", Arial, sans-serif;
+	background-color: #c7e1ff;
+	font-size: 13px;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+body, html {
+	height: 100%
 }
 
-.middle {
-  position: absolute;
-  padding-left: 2%;
-  width: 100%;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-  font-weight: lighter;
-  color: white;
+h1, h2, h3, h4 {
+	font-family: "Josefin Slab", serif;
+}
+h1 {
+	font-style: italic;
+	font-weight: bold;
+	font-size: 40px;
+}
+h2 {
+	font-size: 20px;
+}
+a, a:visited {
+	text-decoration: none;
+	color: #2e639e;
+}
+a:hover {
+	text-decoration: underline;
+}
+.touchonly {
+	display: none;
+}
+html.touch .touchonly {
+	display: block;
+}
+.noselect * {
+	user-select: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+}
+.doselect * {
+	user-select: auto;
+	-webkit-user-select: auto;
+	-khtml-user-select: auto;
+	-moz-user-select: auto;
+	-o-user-select: auto;
 }
 
-#wrapper {
-    position:absolute;
-    height:100%;
-    width:100%;
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
 }
-.panels {
-    position:relative;
-    height:100%;
-    min-height:100%;
-    width:100%;
-    z-index:1000;
-}
-#a{
-    position:fixed;
-    height: inherit;
-    width: 100%;
-    top:0;
-    z-index:-99;
 
+.clearfix {
+    display: inline-block;
 }
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+/* My Code */
 .background_image{
   background-size: cover!important;
   width: 100%;
@@ -55,36 +88,12 @@ html, body {
     width: 100%;
     height: auto;
     background: url("../images/still.jpg") no-repeat center center fixed;
-}
-
-#b{
-   margin-top:100%;
-   width: 100%;
-   height: auto;
-   background-color: white;
-}
-
-#c{
-   background:pink;
-}
-
-#d{
-   background:green;
-}
-.content {
-  padding: 10%;
-}
-.container-fluid {
-  padding: 0 0!important;
-}
-.width{
-  width: 100%;
-}
-.pinkBackground{
-  background-color: pink;
-  opacity: 0.8;
-}
-.container {
-    background: black;
-    position: relative;
-}
+	}
+.middle {
+		  position: absolute;
+		  padding-left: 2%;
+		  width: 100%;
+		  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+		  font-weight: lighter;
+		  color: white;
+		}

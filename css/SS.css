@@ -39,13 +39,16 @@ html, body {
   /*object-fit: contain;*/
 
 }
+.right {
+  padding-left: 80%!important;
+}
 .middle {
   position: absolute;
-  padding-left: 2%;
+  padding-left: 5%;
   padding-top: 2%;
   width: 100%;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
-  font-size: 0.4em;
+  font-size: 0.2em;
   font-weight: lighter;
   color: white;
   z-index: 1;
