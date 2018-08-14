@@ -3,7 +3,7 @@
 */
 body {
 	font-family: "Source Sans Pro", Arial, sans-serif;
-	background-color: #c7e1ff;
+	background-color: black;
 	font-size: 13px;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -70,7 +70,7 @@ html[xmlns] .clearfix {
 * html .clearfix {
     height: 1%;
 }
-/* My Code */
+/*Copy Right Clarice Hilton 2018 */
 .background_image{
   background-size: cover!important;
   width: 100%;
@@ -97,3 +97,13 @@ html[xmlns] .clearfix {
 		  font-weight: lighter;
 		  color: white;
 		}
+
+
+/*.panel {
+  min-height: 100%;
+  width: 100%;
+	overflow: auto!important;
+}
+.panel.green {
+  margin-bottom: 400px
+}*/
